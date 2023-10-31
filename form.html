@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <title>Book Registration Form</title>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-semibold mb-4">Register New Book</h1>
+        <form action="process_book.php" method="post" class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="title" class="text-sm text-gray-600">Title</label>
+                    <input type="text" id="title" name="title" class="w-full mt-1 p-2 border rounded-lg" required>
+                </div>
+                <div>
+                    <label for="pages" class="text-sm text-gray-600">Number of Pages</label>
+                    <input type="number" id="pages" name="pages" class="w-full mt-1 p-2 border rounded-lg" required>
+                </div>
+                <div>
+                    <label for="status" class="text-sm text-gray-600">Status</label>
+                    <select id="status" name="status" class="w-full mt-1 p-2 border rounded-lg" required>
+                        <option value="read">Read</option>
+                        <option value="re-read">Re-read</option>
+                        <option value="dnf">Did Not Finish (DNF)</option>
+                        <option value="currently_reading">Currently Reading</option>
+                        <option value="returned_unread">Returned Unread</option>
+                        <option value="want_to_read">Want to Read</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="price" class="text-sm text-gray-600">Price</label>
+                    <input type="number" id="price" name="price" class="w-full mt-1 p-2 border rounded-lg" required>
+                </div>
+                <div>
+                    <label for="pages_read" class="text-sm text-gray-600">Number of Pages Read</label>
+                    <input type="number" id="pages_read" name="pages_read" class="w-full mt-1 p-2 border rounded-lg" required>
+                </div>
+                <div>
+                    <label for="format" class="text-sm text-gray-600">Format</label>
+                    <select id="format" name="format" class="w-full mt-1 p-2 border rounded-lg" required>
+                        <option value="print">Print</option>
+                        <option value="pdf">PDF</option>
+                        <option value="ebook">Ebook</option>
+                        <option value="audiobook">Audiobook</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="suggested_by" class="text-sm text-gray-600">Suggested By</label>
+                    <input type="text" id="suggested_by" name="suggested_by" class="w-full mt-1 p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label for="finished" class="text-sm text-gray-600">Finished</label>
+                    <input type="checkbox" id="finished" name="finished" class="mt-1">
+                </div>
+            </div>
+            <button type="submit" class="mt-4 bg-blue-500 text-white font-semibold p-2 rounded hover:bg-blue-600">Register Book</button>
+        </form>
+    </div>
+</body>
+</html>
